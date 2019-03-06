@@ -1,0 +1,20 @@
+{% if PIWIK_URL and PIWIK_SITE_ID %}
+    <script type="text/javascript">
+    // @license magnet:?xt=urn:btih:c80d50af7d3db9be66a4d0a86db0286e4fd33292&dn=bsd-3-clause.txt BSD-3-Clause
+    {% if PIWIK_SSL_URL %}
+        var pkBaseURL = (("https:" == document.location.protocol) ? "https://{{ PIWIK_SSL_URL }}/" : "http://{{ PIWIK_URL }}/");
+    {% else %}
+        var pkBaseURL = (("https:" == document.location.protocol) ? "https://{{ PIWIK_URL }}/" : "http://{{ PIWIK_URL }}/");
+    {% endif %}
+    document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+    // @license-end
+    </script><script type="text/javascript">
+    // @license magnet:?xt=urn:btih:c80d50af7d3db9be66a4d0a86db0286e4fd33292&dn=bsd-3-clause.txt BSD-3-Clause
+    try {
+    var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", {{ PIWIK_SITE_ID }});
+    piwikTracker.trackPageView();
+    piwikTracker.enableLinkTracking();
+    } catch( err ) {}
+    // @license-end
+    </script><noscript><p><img src="http://{{ PIWIK_URL }}/piwik.php?idsite={{ PIWIK_SITE_ID }}" style="border:0" alt="" /></p></noscript>
+{% endif %}

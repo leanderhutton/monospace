@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content_title %}{% endblock %}
+{% block content %}        
+{% if articles %}
+
+            <header>
+            <h1><a href="{{ SITEURL }}" id="site-title"> {# {{ SITENAME }} #} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a> {#:#}</h1> 
+		{% for article in articles_page.object_list %}
+		<h1><a href="{{ SITEURL }}/{{ article.url }}" id="page-title">{{ article.title }}</a></h1>
+                {% if not HIDE_DATE %}<b><time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time></b>{% endif %}
+            </header>
+
+            <article>
+                {{ article.content }}
+            </article>
+	    	{% endfor %}
+{% else %}
+    No posts found.
+{% endif %}
+
+ {% if DEFAULT_PAGINATION %}
+        <div class="paginator">
+            {% if articles_page.has_previous() %}
+                {% if articles_page.previous_page_number() == 1 %}
+                    <a href="{{ SITEURL }}/{{ page_name }}.html">&lt;&lt;&lt;</a>
+                {% else %}
+                    <a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.previous_page_number() }}.html">
+                        &lt;&lt;&lt;
+                    </a>
+                {% endif %}
+            {% endif %}
+            Page {{ articles_page.number }} / {{ articles_paginator.num_pages }}
+            {% if articles_page.has_next() %}
+                <a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html">
+                    &gt;&gt;&gt;
+                </a>
+            {% endif %}
+        </div>
+        {% endif %}
+
+
+{% endblock content %}

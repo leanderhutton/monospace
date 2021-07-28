@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }}{% endblock %}
 {% block content %}        
+<div id="wrap" style="width:100%">
+<div id="container" style="width:70%">
+<div class="entry">
+
 <header>
 <h1><a href="{{ SITEURL }}" id="site-title">{# {{ SITENAME }} #} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a> {#:#}
         <a href="{{ SITEURL }}/{{ page.url }}" id="page-title">{{ page.title }}</a></h1>
@@ -8,4 +12,6 @@
 <article>    
     {{ page.content }}
 </article>
+</div>
+</div>
 {% endblock %}

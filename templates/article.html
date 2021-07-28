@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block title %}{{ super() }} : {{ article.title }}{% endblock %}
 {% block content %}        
+<div id="wrap" style="width:100%">
+<div id="container" style="width:70%">
+<div class="entry">
 <header>
 <h1><a href="{{ SITEURL }}" id="site-title"> {#{{ SITENAME }}#} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a> {#:#}
         <a href="{{ SITEURL }}/{{ article.url }}" id="page-title">{{ article.title }}</a></h1>
@@ -23,7 +26,8 @@
              document.getElementsByTagName('body')[0]).appendChild(dsq);
       })();
     </script>
-    <noscript>Please enable JavaScript to view the comments.</noscript>
     {% endif %}
 </article>
+</div>
+</div>
 {% endblock %}

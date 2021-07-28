@@ -1,6 +1,5 @@
 @import url("pygment.css");
-
-body { margin:0px; padding:20px 0px; text-align:center; font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif; color:#000000; }
+body { margin:0px; padding:20px 0px; text-align:center; font-family:"Times New Roman", Times, serif; color:#000000; }
 a, a:visited { text-decoration:none; color:#1d2a78; }
 a:hover { text-decoration:underline; }
 h1, h2, h3, h4, h5, h6, h7 { margin:0px; line-height: 1.1em; }
@@ -11,10 +10,10 @@ blockquote cite { display:block; padding:10px 20px 0 0; text-align:right; }
 input, textarea { padding:5px; border:1px solid #8A8A8A; background:#EAEAEA; }
 input:hover, textarea:hover, blockquote:hover { background:#E5E5E5; }
 
-#wrap { margin:0px auto; text-align:left; font-size: 14px; line-height: 1.4; }
+#wrap { margin:0px auto; text-align:left; line-height: 1.4; }
 #container { float:right; }
 #sidebar { overflow:hidden; clear:left; text-align:right; width:200px; height:auto; padding:0px 15px 0px 0px; border-right:1px dotted #C8C8C8; }
-#sidebar li { list-style-type:none; font-size: 1.2em; font-weight: bold; }
+#sidebar li { list-style-type:none; font-size: 1.2em; line-height: 1.3em; font-weight: bold; }
 #sidebar > li { margin:20px 0px; }
 #sidebar h1 { border-bottom:1px dotted #C8C8C8; }
 #sidebar .description { display:block; font-size: 1.1em; width:100%; height:auto; margin:0px 0px 10px 0px; }
@@ -41,7 +40,14 @@ ul.sub-menu, ul.children { margin:0px 10px 0px 0px; }
 .portfolio h4 { font-size: 2.0em; font-family: sans; } 
 .portfolio img { display:block; border:1px solid #000000 !important; margin-left: auto; margin-right: auto; max-height: 100%; max-width: 100%; }
 
-.entry { font-size: 1.15em; line-height: 1.3em; padding-right: 1.0em; max-width:1024px; }
+.prow { display: flex; flex-wrap: wrap; padding: 0 4px; }
+.pcolumn { flex: 25%; max-width: 25%; padding: 0 4px; }
+.pcolumn img { margin-top: 8px; vertical-align: middle; }
+@media screen and (max-width: 800px) { .pcolumn { flex: 50%; max-width: 50%; } }
+@media screen and (max-width: 600px) { .pcolumn { flex: 100%; max-width: 100%; } }
+
+
+.entry { font-size: 1.15em; padding-right: 1.0em; max-width:1024px; }
 .entry h2, h3, h4, h5 { margin:30px 0px 10px 0px; }
 
 .entry img { display:block; border:1px solid #000000 !important; margin-left: auto; margin-right: auto; max-height: 100%; max-width: 100%; }

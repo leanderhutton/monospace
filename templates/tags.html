@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
+<div id="wrap" style="width:100%">
+<div id="container" style="width:70%">
+<div class="entry">
 <ul>
 {% for tag, articles in tags %}
     <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
 {% endfor %}
 </ul>
+</div>
+</div>
 {% endblock %}
-

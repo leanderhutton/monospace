@@ -2,8 +2,8 @@
 .highlight pre {
     color: #FFFFFF;
     background-color: #333333;
-    padding: 10px;
     white-space: pre-wrap;
+    padding: 0.20em;
     font-size: 14px;
 }
 

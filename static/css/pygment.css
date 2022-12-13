@@ -3,8 +3,9 @@
     color: #FFFFFF;
     background-color: #333333;
     white-space: pre-wrap;
-    padding: 0.20em;
-    font-size: 14px;
+    padding: 0.10em;
+    font-size: 1.0em;
+    line-height: 1.4em;
 }
 
 .highlight .hll {

@@ -1,5 +1,28 @@
 @import url("pygment.css");
-body { margin:0px; padding:20px 0px; text-align:center; font-family: Tahoma, Arial, Verdana, Sans-Serif, "Lucida Sans"; color:#000000; }
+@font-face {
+  font-family: "Garamond";
+  src: url("fonts/AppleGaramond.woff") format('woff');
+}
+
+@font-face {
+  font-family: "Garamond";
+  src: url("fonts/AppleGaramond-Bold.woff") format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Garamond";
+  src: url("fonts/AppleGaramond-BoltItalic.woff") format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Garamond";
+  src: url("fonts/AppleGaramond-Italic.woff") format('woff');
+  font-style: italic;
+}
+body { margin:0px; padding:20px 0px; text-align:center; font-family: Garamond, Serif; color:#000000; }
 a, a:visited { text-decoration:none; color:#1d2a78; }
 a:hover { text-decoration:underline; }
 h1, h2, h3, h4, h5, h6, h7 { margin:0px; line-height: 1.1em; font-size: 1.7em; }

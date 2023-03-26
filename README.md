@@ -19,4 +19,3 @@ For use with Markdown code highlighting:
 Also, you might want to include the `DESCRIPTION` option (it appears in the left sidebar):
 
     DESCRIPTION = 'My blog and stuff ...'
-

@@ -1,28 +1,5 @@
 @import url("pygment.css");
-@font-face {
-  font-family: "Garamond";
-  src: url("fonts/AppleGaramond.woff") format('woff');
-}
-
-@font-face {
-  font-family: "Garamond";
-  src: url("fonts/AppleGaramond-Bold.woff") format('woff');
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Garamond";
-  src: url("fonts/AppleGaramond-BoltItalic.woff") format('woff');
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Garamond";
-  src: url("fonts/AppleGaramond-Italic.woff") format('woff');
-  font-style: italic;
-}
-body { margin:0px; padding:20px 0px; text-align:center; font-family: Garamond, Serif; color:#000000; }
+body { margin:0px; padding:20px 0px; text-align:center; font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; color:#000000; }
 a, a:visited { text-decoration:none; color:#1d2a78; }
 a:hover { text-decoration:underline; }
 h1, h2, h3, h4, h5, h6, h7 { margin:0px; line-height: 1.0em; font-size: 2.0em; }
@@ -42,7 +19,7 @@ tr:nth-child(odd) { background-color: lightgray;}
 #container { float: right; width: 70% }
 #sidebar { overflow:hidden; clear:left; text-align:right; width:25%; height:auto; padding:0px 15px 0px 0px; border-right:0.15em solid #C8C8C8; }
 #sidebar .description { display:block; font-size: 1.1em; width:100%; height:auto; margin:0px 0px 10px 0px; }
-#sidebar li { list-style-type:none; font-size: 1.5em; line-height: 1.1em; font-weight: bold; }
+#sidebar li { list-style-type:none; font-size: 1.3em; line-height: 1.1em; font-weight: bold; }
 #sidebar > li { margin:20px 0px; }
 #sidebar .description { display:block; font-size: 1.1em; width:100%; height:auto; margin:0px 0px 10px 0px; }
 #landing img { display:block; border:1px solid #000000 !important; margin-left: auto; margin-right: auto; max-height: 100%; max-width: 100%; }
@@ -75,7 +52,7 @@ ul.sub-menu, ul.children { margin:0px 10px 0px 0px; }
 @media screen and (max-width: 600px) { .pcolumn { flex: 100%; max-width: 100%; } }
 
 
-.entry { font-size: 1.3em; padding-right: 1.0em; max-width:1024px; line-height:1.2em; }
+.entry { font-size: 1.1em; padding-right: 1.0em; max-width:1024px; line-height:1.2em; }
 .entry h2, h3, h4, h5 { margin:30px 0px 10px 0px; }
 
 .entry img { display:block; border:1px solid #000000 !important; margin-left: auto; margin-right: auto; max-height: 100%; max-width: 100%; }

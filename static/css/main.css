@@ -1,11 +1,13 @@
 @import url("pygment.css");
 @import url("colorbox.css");
-body { margin:0px; padding:20px 0px; text-align:center; font-family: Arial, Helvetica, sans-serif; color:#000000; }
-a, a:visited { text-decoration:none; color:#002b80; }
-a:hover { text-decoration:underline; }
+@import url("justifiedGallery.min.css");
+
+body { margin:0px; padding:15px 0px; text-align:center;  font-family: Arial, Helvetica, sans-serif; color:#000000; }
+a, a:visited { color:#0070b4;}
+a:hover { color:#009dfc;  }
 h1, h2, h3, h4, h5, h6, h7 { margin:0px; line-height: 1.0em; }
 h4, h5, h6 { font-size:18px; }
-h1 { padding:0px 0px 0.5em; margin:0px 0px 5px 0px; }
+h1 { padding:0px 0px 0.5em; margin:0px 0px 5px 0px; font-size: 1.5em; }
 blockquote { font-style:italic; background:#EAEAEA; margin:20px; padding:5px 10px; }
 blockquote cite { display:block; padding:10px 20px 0 0; text-align:right; }
 input, textarea { padding:5px; border:1px solid #8A8A8A; background:#EAEAEA; }
@@ -15,19 +17,21 @@ th { color: white; background: navy; text-align: center; }
 td { padding-left: 0.5em; }
 table { width: 100%; }
 tr:nth-child(odd) { background-color: lightgray;} 
+pre { font-size: 1.2em; }
 
 #wrap { margin:0em auto; text-align:left; line-height: 1.0; width: 100%; }
-#container { float: right; width: 70% }
-#sidebar { overflow:hidden; clear:left; text-align:right; width:25%; height:auto; padding:0px 15px 0px 0px; border-right:0.15em solid #C8C8C8; }
+#container { float: right; width: 77%; }
+#sidebar { overflow:hidden; clear:left; text-align:right; width: 20%; height:auto; padding:20px 15px 0px 0px; border-right:0.15em solid #C8C8C8; }
 #sidebar .description { display:block; font-size: 1.0em; width:100%; height:auto; margin:0px 0px 10px 0px; }
 #sidebar li { list-style-type:none; font-size: 1.2em; line-height: 1.1em; font-weight: bold; }
-#sidebar li a { font-weight: normal; } 
+#sidebar a { text-decoration: none }
 #sidebar > li { margin:20px 0px; }
 #sidebar .description { display:block; font-size: 1.1em; width:100%; height:auto; margin:0px 0px 10px 0px; }
 #landing img { display:block; border:1px solid #000000 !important; margin-left: auto; margin-right: auto; max-height: 100%; max-width: 100%; }
 #landing p { text-align: center; }
 
 /*pre { background: #14191E; border: 1px solid #AAAAAA; overflow: auto; padding: 10px; color: #FFFFFF; font-family: "Lucida Console", "Courier New", monospace; }*/
+code { font-size: 1.1em; }
 
 ul.sub-menu, ul.children { margin:0px 10px 0px 0px; }
 
@@ -35,18 +39,6 @@ ul.sub-menu, ul.children { margin:0px 10px 0px 0px; }
 .post-edit-link { clear:both; }
 .meta { margin:10px; padding:15px; background:#EAEAEA; clear:both; }
 .meta span { display:block; clear:left; }
-
-.gallerysquare { position: relative; float: left; max-width: 50%; max-height: 50%; display: flex; }
-.gallerysquare img { object-fit: cover; width: 500px; height: 500px; } 
-.gallerylabel { position: absolute; bottom: 20px; left: 20px; background-color: rgba(0, 0, 0, 0.5); color: white; font-size: 1.7em; font-weight: 600; font-family: Serif; padding: 1.5em; }
-
-.gallerylabel a.hover { font-style: underline; }
-.gallerylabel a { color:#FFFFFF; }
-.gallerylabel a.visited { color:#FFFFFF; }
-
-.portfolio { padding-right: 1.0em; text-align: center; }
-.portfolio h4 { font-size: 2.0em; font-family: Serif; } 
-.portfolio img { display:block; border:1px solid #000000 !important; margin-left: auto; margin-right: auto; max-height: 100%; max-width: 100%; }
 
 .prow { display: flex; flex-wrap: wrap; padding: 0 4px; }
 .pcolumn { flex: 25%; max-width: 25%; padding: 0 4px; }
@@ -56,8 +48,7 @@ ul.sub-menu, ul.children { margin:0px 10px 0px 0px; }
 
 
 .entry { font-size: 1.0em; padding-right: 1.0em; max-width:1024px; line-height:1.2em; }
-.entry h2, h3, h4, h5 { margin:30px 0px 10px 0px;  font-variant: small-caps; }  
-.entry h1 { font-variant: small-caps; } 
+.entry h2, h3, h4, h5 { margin:30px 0px 10px 0px; }  
 .entry img { display:block; border:1px solid #000000 !important; margin-left: auto; margin-right: auto; max-height: 100%; max-width: 100%; }
 .entry img.wp-smiley { border:0px !important; }
 .entry a img:hover { background-color:transparent; border:1px solid #E5E5E5 !important; }
@@ -111,8 +102,8 @@ ul.commentlist ul.children li { list-style-type:none; border:1px solid #AAA }
 input#submit { font-weight:bold; }
 input#s { width:70%; height:auto; margin:5px 0px; }
 
-#footer { text-align:center; clear:both; font-size: 1.1em; }
-#footer div { margin:30px 0px 0px 0px; padding:30px 0px 0px 0px; border-top:0.15em solid #C8C8C8; }
+#footer { text-align:center; clear:both; font-size: 1.0em; }
+#footer div { margin:30px 0px 0px 0px; padding:20px 0px 0px 0px; }
 #footer li { list-style-type:none; }
 #footer .widget_tag_cloud h2 { display:none; }
 
@@ -120,4 +111,5 @@ input#s { width:70%; height:auto; margin:5px 0px; }
 #page-title{
     position : relative;
     top : 8px;
+    text-decoration: none;
 }

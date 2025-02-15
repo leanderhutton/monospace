@@ -7,7 +7,6 @@
 {% if articles %}
 
             <header>
-            <h1><a href="{{ SITEURL }}" id="site-title"> {# {{ SITENAME }} #} {% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif %}</a> {#:#}</h1> 
 		{% for article in articles_page.object_list %}
 		<h1><a href="{{ SITEURL }}/{{ article.url }}" id="page-title">{{ article.title }}</a></h1>
                 {% if not HIDE_DATE %}<b><time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time></b>{% endif %}
